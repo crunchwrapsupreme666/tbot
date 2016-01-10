@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="background_container">
+      <div class="game_container">
+        <h1 class="game_title">tic tac toe</h1>
+        <h2 class="game_sub_title">The Unbeatable Bot</h1>
+        <div class="menu">
+          <button id="play_x" class="play_button">X</button>
+          <button id="play_o" class="play_button">O</button>
+          <span class="play_text">Choose Your Position</span>
+        </div>
+        <div class="game">
+          <div class="row">
+            <div id="q00" class="cell"></div>
+            <div id="q01" class="cell"></div>
+            <div id="q02" class="cell"></div>
+          </div>
+          <div class="row">
+            <div id="q10" class="cell"></div>
+            <div id="q11" class="cell"></div>
+            <div id="q12" class="cell"></div>
+          </div>
+          <div class="row">
+            <div id="q20" class="cell"></div>
+            <div id="q21" class="cell"></div>
+            <div id="q22" class="cell"><div class="loader"></div></div>
+          </div>
+          <span class="current_turn_text">Your Turn</span>
+        </div>
+      </div>
+    </div>
+    <div class="turn">
+      <div class="loader"></div>
+    </div>
+  </body>
+  <script src="jquery-2.1.4.min.js"></script>
+  <script src="client.js"></script>
+</html>

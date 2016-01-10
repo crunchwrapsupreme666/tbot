@@ -1,0 +1,293 @@
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:400,700|Lato:100,300,400,700);
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #000;
+  font-family: "Lato", sans-serif;
+}
+
+.background_container {
+  background: linear-gradient(to bottom right, #5E696F, #B0B6B9);
+  background: linear-gradient(to bottom right, #101E36,#325A5D);
+  background-color: #5E696F;
+  width: 100%;
+  height: 100%;
+}
+
+.game_container {
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  position: relative;
+  text-align: center;
+  animation: 0.8s fadeSlideUp;
+}
+
+.game_title, .game_sub_title {
+  font-family: "Lato", sans-serif;
+}
+
+.game_title {
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFF;
+  margin: 0;
+}
+
+.game_sub_title {
+  font-weight: 100;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.current_turn_text {
+  margin-bottom: 25px;
+  color: #000;
+  animation: 0.5s fadeSlideUp;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    top: 60%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.game {
+  display: none;
+  margin: 0 auto;
+  transition: 0.2s cubic-bezier(0.23, 0.49, 0.45, 0.94);
+}
+
+.game:active {
+  transform: scale(1.05);
+}
+
+.menu {
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.play_text {
+  display: block;
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #FFF;
+  margin-top: 29px;
+  background-color: rgba(0,0,0,0.75);
+  padding: 10px 0;
+  width: 310px;
+  margin: 0 auto;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.current_turn_text {
+  display: block;
+  font-size: 15px;
+  color: #FFF;
+  margin-top: 29px;
+  background-color: rgba(0,0,0,0.75);
+  padding: 10px 0;
+  width: 310px;
+  margin: 0 auto;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.play_button {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  color: #FFF;
+  font-size: 52px;
+  text-transform: uppercase;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-family: "Comfortaa", sans-serif;
+  transition: 0.2s cubic-bezier(0.23, 0.49, 0.45, 0.94);
+  cursor: pointer;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.play_button:hover {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.play_button:active {
+  background-color: rgb(161, 218, 94) !important;
+}
+
+#play_x {
+  margin-right: 10px;
+}
+
+.game .row {
+  font-size: 0;
+}
+
+.game .row:first-child .cell {
+  margin-top: 0;
+}
+
+.game .row .cell:first-child {
+  margin-left: 0;
+}
+
+.game .row .cell {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  transition: 0.1s linear;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 48px;
+  font-family: "Comfortaa", sans-serif;
+  vertical-align: top;
+  text-align: center;
+  line-height: 100px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-left: 6px;
+  margin-top: 6px;
+  border-radius: 4px;
+}
+
+.game .row .cell:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.game .row .cell:active {
+  background-color: rgb(161, 218, 94);
+}
+
+.game .row .cell:last-child {
+  border-right: 0;
+}
+
+.game .row:last-child .cell {
+  border-bottom: 0;
+}
+
+.loader {
+  width: 25px;
+  display: inline-block;
+  height: 25px;
+  border-left: 5px solid white;
+  border-radius: 100%;
+  animation: 0.75s spin infinite;
+  border-style: dashed;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+  margin-top: 35px;
+}
+
+.turn {
+  position: absolute;
+  display: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+}
+
+.spin {
+  animation: 1s spin infinite !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.fadeSlideOut {
+  animation: 0.5s fadeSlideOut;
+  overflow: hidden;
+}
+
+.fadeSlideIn {
+  animation: 0.5s fadeSlideIn;
+  overflow: hidden;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+@-webkit-keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    max-height: 0;
+  }
+  100% {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+@keyframes fadeSlideOut {
+  0% {
+    opacity: 1;
+    max-height: 500px;
+  }
+  100% {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+@-webkit-keyframes fadeSlideOut {
+  from {
+    opacity: 1;
+    max-height: 500px;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
