@@ -225,21 +225,21 @@ function setCurrentTurnText() {
   if (game.isOver) {
     declareWinner();
   } else if (game.isNextMoveX == (player == "X")) {
-    currentTurnText.text("Your turn!");
+    currentTurnText.text("Your turn");
   } else {
-    currentTurnText.text("TBot's turn!");
+    currentTurnText.text("TBot's turn");
   }
 }
 
 function declareWinner() {
   var winner = game.winner;
   if (winner == "D") {
-    currentTurnText.text("It's a draw! Play again?");
+    currentTurnText.text("It's a draw. Play again?");
     currentTurnTextOn = true;
     currentTurnText.css("cursor", "pointer");
     currentTurnText.css("background-color", "#2196F3");
   } else {
-    currentTurnText.text("TBot wins! Play again?");
+    currentTurnText.text("TBot wins. Play again?");
     currentTurnTextOn = true;
     currentTurnText.css("cursor", "pointer");
     currentTurnText.css("background-color", "#2196F3");

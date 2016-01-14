@@ -13,9 +13,10 @@ body {
 }
 
 .background_container {
-  background: linear-gradient(to bottom right, #5E696F, #B0B6B9);
-  background: linear-gradient(to bottom right, #101E36,#325A5D);
-  background-color: #5E696F;
+  /*background: linear-gradient(to bottom right, #5E696F, #B0B6B9);
+  background: linear-gradient(to bottom right, #101E36,#325A5D);*/
+  background: linear-gradient(to bottom right, #2196F3,#783C96);
+  /*background-color: #5E696F;*/
   width: 100%;
   height: 100%;
 }
@@ -46,7 +47,7 @@ body {
   font-size: 36px;
   color: rgba(255, 255, 255, 0.75);
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .current_turn_text {
@@ -95,7 +96,7 @@ body {
   width: 310px;
   margin: 0 auto;
   border-radius: 4px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .current_turn_text {
@@ -132,7 +133,10 @@ body {
 }
 
 .play_button:active {
-  background-color: rgb(161, 218, 94) !important;
+  /*background-color: rgb(161, 218, 94) !important;*/
+  color: black;
+  background-color: white !important;
+  /*background-color: rgb(161, 218, 94) !important;*/
 }
 
 #play_x {
@@ -175,7 +179,8 @@ body {
 }
 
 .game .row .cell:active {
-  background-color: rgb(161, 218, 94);
+  /*background-color: rgb(161, 218, 94);*/
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .game .row .cell:last-child {
