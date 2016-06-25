@@ -184,7 +184,7 @@ $(".cell").click(function(e) {
 function getBestMove(game, bot) {
   var host = window.location.host;
   $.ajax({
-    url: "http://" + host + "/",
+    url: window.location.href,
     method: "POST",
     data: {game: JSON.stringify(game), bot: bot},
     success: function(data) {
